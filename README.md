@@ -9,12 +9,18 @@ anti-cheat bypasses. No current Apex offsets or SDK were provided.
 
 ## Download and run on Windows
 
-Open this repository's **Actions** tab, select the latest successful **Windows
-build** run for `main`, and download **ApexVisualizer-Windows-x64** under
-**Artifacts** (GitHub sign-in may be required). Extract the downloaded artifact
-and the portable ZIP inside it, then double-click `apex_visualizer.exe`.
-Windows 10/11 x64 and Direct3D 11 support are required. No development tools are
-needed to run the packaged app. The sample-data window opens without a console.
+Download [ApexVisualizer-Windows-x64.zip](downloads/ApexVisualizer-Windows-x64.zip)
+from the `downloads` folder in the Code tab. On the ZIP's GitHub file page,
+click **Download raw file**. Extract the ZIP, then double-click
+`apex_visualizer.exe`. A SHA-256 checksum is in `downloads/SHA256SUMS.txt`.
+
+This checked-in executable was cross-compiled for Windows x64 with llvm-mingw
+20261104 and Dear ImGui v1.91.8. Its PE format and DLL imports were inspected;
+it has not been run on Windows. It displays sample players only.
+Windows 10/11 x64 and Direct3D 11 support are required.
+
+The **Actions** tab also provides a ZIP artifact after each successful
+**Windows build** run. Those artifacts are built with MSVC from that run's source.
 
 ## Windows build
 
