@@ -7,6 +7,15 @@ Includes toggles for bounding boxes, health bars, skeletons, line thickness and 
 ESP or a transparent in-game overlay. It does not read Apex memory or include
 anti-cheat bypasses. No current Apex offsets or SDK were provided.
 
+## Download and run on Windows
+
+Open this repository's **Actions** tab, select the latest successful **Windows
+build** run for `main`, and download **ApexVisualizer-Windows-x64** under
+**Artifacts** (GitHub sign-in may be required). Extract the downloaded artifact
+and the portable ZIP inside it, then double-click `apex_visualizer.exe`.
+Windows 10/11 x64 and Direct3D 11 support are required. No development tools are
+needed to run the packaged app. The sample-data window opens without a console.
+
 ## Windows build
 
 Install Visual Studio 2022 with **Desktop development with C++**, Windows SDK,
@@ -16,6 +25,7 @@ CMake 3.24+ and Git. Run in a developer PowerShell:
 cmake -S apex-visualizer -B build -A x64
 cmake --build build --config Release
 ctest --test-dir build -C Release --output-on-failure
+cpack --config build/CPackConfig.cmake -C Release -B dist
 .\build\Release\apex_visualizer.exe
 ```
 
